@@ -7,10 +7,14 @@ O objetivo desta imagem Docker é prover o software básico para utilização do
 Para utilizar em modo de desenvolvimento:
 
 *  Instale a última versão do Docker em seu computador;
-*  Faça checkout do i3geo a partir do gitHub;
-*  Entre na pasta onde está o código;
-*  Digite o comando `docker run -it -p 80:8080 -v $PWD:/var/www/i3geo --rm i3geo/software-base`
-*  Inicie o apache `apachectl start`
+*  Faça checkout do i3geo a partir do gitHub (você pode usar outro repositório, como o existente no Portal do Software Público):
+`git clone https://github.com/edmarmoretti/i3geo.git`
+*  Entre na pasta onde está o código:
+`cd i3geo`
+*  Digite o comando
+`docker run -it -p 80:8080 -v $PWD:/var/www/i3geo --rm i3geo/software-base`
+*  Inicie o apache 
+`apachectl start`
 *  Acesso navegador e digite `http://localhost/i3geo`
 
 O comando acima do docker faz com que o usuário entre na instância da imagem i3geo já com o código no DOC_ROOT do apache, sendo assim, basta escolher o editor de sua preferência e alterar o código.
