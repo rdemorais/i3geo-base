@@ -7,7 +7,7 @@ O objetivo desta imagem Docker é prover o software básico para utilização do
 Para utilizar em modo de desenvolvimento:
 
 *  Instale a última versão do Docker em seu computador;
-*  Faça checkout do i3geo a partir do gitHub (você pode usar outro repositório, como o existente no Portal do Software Público):
+*  Faça checkout do i3geo a partir do gitHub, com a versão em desenvolvimento do i3Geo (você pode usar outro repositório, como o existente no Portal do Software Público, para utilizar o código de outras versões https://softwarepublico.gov.br/gitlab/groups/i3geo ):
 `git clone https://github.com/edmarmoretti/i3geo.git`
 *  Entre na pasta onde está o código:
 `cd i3geo`
