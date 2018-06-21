@@ -40,9 +40,6 @@ RUN apt-get update && \
     a2enmod rewrite && \
     a2enmod cgi && \
     a2enmod xsendfile && \
-    wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb && \
-    dpkg -i mod-pagespeed-*.deb && \
-    apt-get -f install && \
     wget http://download.osgeo.org/mapserver/mapserver-7.0.6.tar.gz && \
     tar xvf mapserver-${MAPSERVER_VERSION}.tar.gz && \
     rm -f mapserver-${MAPSERVER_VERSION}.tar.gz && \
