@@ -62,7 +62,6 @@ RUN apt-get update && \
     echo extension=php_mapscript.so > /etc/php/5.6/mods-available/mapscript.ini && \
     phpenmod mapscript && \
     cd /var/www && \
-    touch /var/www/index.php && \
     ln -s /tmp/ms_tmp ms_tmp && \
     apt-get remove --purge -y wget cmake && \
     apt-get clean && \
@@ -70,4 +69,5 @@ RUN apt-get update && \
 COPY ./docker/000-default.conf /etc/apache2/sites-available/
 COPY ./docker/php.ini /etc/php/5.6/apache2/
 COPY ./docker/ports.conf /etc/apache2/
+COPY ./docker/index.php /var/www/
 EXPOSE 8080
