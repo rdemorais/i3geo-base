@@ -22,7 +22,6 @@ ENV DEPENDENCIAS  \
     php5.6-dev \
     memcached \
     wget \
-    cron \
     libfreetype6-dev \
     libproj-dev \
     libfribidi-dev \
