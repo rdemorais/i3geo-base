@@ -30,7 +30,8 @@ ENV DEPENDENCIAS  \
     libgdal-dev \
     cmake \ 
     libapache2-mod-xsendfile \
-    protobuf-c-compiler
+    protobuf-c-compiler \
+    gdal-bin
 RUN apt-get update && \
     export LANG=C.UTF-8 && \
     apt-get install --no-install-recommends -y build-essential && \
