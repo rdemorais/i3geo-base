@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ENV MAPSERVER_VERSION 7.0.6
+ENV MAPSERVER_VERSION 7.2.1
 ENV DEPENDENCIAS  \
     apache2 \
     php5.6 \
@@ -40,7 +40,8 @@ RUN apt-get update && \
     a2enmod rewrite && \
     a2enmod cgi && \
     a2enmod xsendfile && \
-    wget http://download.osgeo.org/mapserver/mapserver-7.0.6.tar.gz && \
+    apt-get install protobuf-c-compiler && \
+    wget http://download.osgeo.org/mapserver/mapserver-${MAPSERVER_VERSION}.tar.gz && \
     tar xvf mapserver-${MAPSERVER_VERSION}.tar.gz && \
     rm -f mapserver-${MAPSERVER_VERSION}.tar.gz && \
     cd mapserver-${MAPSERVER_VERSION}/ && \
