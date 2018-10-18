@@ -29,7 +29,8 @@ ENV DEPENDENCIAS  \
     libcairo-dev \
     libgdal-dev \
     cmake \ 
-    libapache2-mod-xsendfile
+    libapache2-mod-xsendfile \
+    protobuf-c-compiler
 RUN apt-get update && \
     export LANG=C.UTF-8 && \
     apt-get install --no-install-recommends -y build-essential && \
@@ -40,7 +41,6 @@ RUN apt-get update && \
     a2enmod rewrite && \
     a2enmod cgi && \
     a2enmod xsendfile && \
-    apt-get install protobuf-c-compiler && \
     wget http://download.osgeo.org/mapserver/mapserver-7.2.1.tar.gz && \
     tar xvf mapserver-${MAPSERVER_VERSION}.tar.gz && \
     rm -f mapserver-${MAPSERVER_VERSION}.tar.gz && \
