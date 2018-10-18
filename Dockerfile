@@ -41,7 +41,7 @@ RUN apt-get update && \
     a2enmod cgi && \
     a2enmod xsendfile && \
     apt-get install protobuf-c-compiler && \
-    wget http://download.osgeo.org/mapserver/mapserver-${MAPSERVER_VERSION}.tar.gz && \
+    wget http://download.osgeo.org/mapserver/mapserver-7.2.1.tar.gz && \
     tar xvf mapserver-${MAPSERVER_VERSION}.tar.gz && \
     rm -f mapserver-${MAPSERVER_VERSION}.tar.gz && \
     cd mapserver-${MAPSERVER_VERSION}/ && \
