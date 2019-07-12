@@ -49,7 +49,8 @@ RUN apt-get update && \
     cd mapserver-${MAPSERVER_VERSION}/ && \
     mkdir build && \
     cd build && \
-    cmake -DCMAKE_INSTALL_PREFIX=/opt \
+    cmake -DCMAKE_CXX_FLAGS="-std=c++11 --coverage" \
+        -DCMAKE_INSTALL_PREFIX=/opt \
         -DWITH_CLIENT_WFS=ON \
         -DWITH_CLIENT_WMS=ON \
         -DWITH_CURL=ON \
